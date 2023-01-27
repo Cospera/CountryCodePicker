@@ -4,11 +4,8 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:country_code_picker/country_code.dart';
 import 'package:country_code_picker/country_codes.dart';
 import 'package:country_code_picker/selection_dialog.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:universal_platform/universal_platform.dart';
-
 export 'country_code.dart';
 
 class CountryCodePicker extends StatefulWidget {
@@ -200,7 +197,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                         ? selectedItem!.toCountryStringOnly()
                         : selectedItem.toString(),
                     style:
-                        widget.textStyle ?? Theme.of(context).textTheme.button,
+                        widget.textStyle ?? Theme.of(context).textTheme.labelLarge,
                     overflow: widget.textOverflow,
                   ),
                 ),
@@ -324,7 +321,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
         }
       });
     } else {
-      showMaterialModalBottomSheet(
+      showModalBottomSheet(
         barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
         backgroundColor: widget.backgroundColor ?? Colors.transparent,
         context: context,
