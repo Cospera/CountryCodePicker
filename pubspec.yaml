@@ -1,6 +1,6 @@
 name: country_code_picker
 description: A flutter package for showing a country code selector.
-version: 3.0.1
+version: 3.0.2
 homepage: https://github.com/Cospera/CountryCodePicker
 
 environment:
