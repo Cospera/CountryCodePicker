@@ -5,6 +5,7 @@ import 'package:country_code_picker/country_code.dart';
 import 'package:country_code_picker/country_codes.dart';
 import 'package:country_code_picker/selection_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:universal_platform/universal_platform.dart';
 export 'country_code.dart';
 
@@ -321,7 +322,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
         }
       });
     } else {
-      showModalBottomSheet(
+      showMaterialModalBottomSheet(
         barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
         backgroundColor: widget.backgroundColor ?? Colors.transparent,
         context: context,
